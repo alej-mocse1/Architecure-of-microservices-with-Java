@@ -6,9 +6,9 @@ spring:
     name: movies-microservice
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/moviesmicroservices
-    username: root
-    password: Cabj1234.
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:moviesmicroservices}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:Cabj1234.}
   jpa:
     hibernate:
       ddl-auto: create-drop
